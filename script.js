@@ -55,7 +55,6 @@ document.getElementById('search-button').addEventListener('click', async () => {
     document.getElementById('special-attack').innerText = data.stats.find((stat) => stat.stat.name === 'special-attack').base_stat;
     document.getElementById('special-defense').innerText = data.stats.find((stat) => stat.stat.name === 'special-defense').base_stat;
     document.getElementById('speed').innerText = data.stats.find((stat) => stat.stat.name === 'speed').base_stat;
-
   } catch (error) {
     const errorMessage = document.createElement('div');
     errorMessage.innerText = 'Pokémon not found';
