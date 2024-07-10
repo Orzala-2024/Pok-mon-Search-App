@@ -78,3 +78,31 @@ main {
 
 .pokemon-size span {
   margin: 0 5px;
+  font-size: 1.1em;
+}
+
+#sprite-img {
+  margin: 20px 0;
+}
+
+#types {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.pokemon-table {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.pokemon-table th, .pokemon-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.pokemon-table th {
+  background-color: #f2f2f2;
+}
