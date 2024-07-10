@@ -1,3 +1,18 @@
+function clearPokemonData() {
+  document.getElementById('pokemon-name').innerText = '';
+  document.getElementById('pokemon-id').innerText = '';
+  document.getElementById('weight').innerText = '';
+  document.getElementById('height').innerText = '';
+  document.getElementById('types').innerText = '';
+  document.getElementById('sprite-img').innerHTML = '';
+  document.getElementById('hp').innerText = '';
+  document.getElementById('attack').innerText = '';
+  document.getElementById('defense').innerText = '';
+  document.getElementById('special-attack').innerText = '';
+  document.getElementById('special-defense').innerText = '';
+  document.getElementById('speed').innerText = '';
+}
+
 document.getElementById('search-button').addEventListener('click', async () => {
   const searchInput = document.getElementById('search-input').value.trim().toLowerCase();
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/${searchInput}`;
@@ -17,7 +32,7 @@ document.getElementById('search-button').addEventListener('click', async () => {
     document.getElementById('pokemon-id').innerText = `#${data.id}`;
     document.getElementById('weight').innerText = `Weight: ${data.weight}`;
     document.getElementById('height').innerText = `Height: ${data.height}`;
-    
+
     // Add sprite image
     const spriteImg = document.createElement('img');
     spriteImg.id = 'sprite';
@@ -46,18 +61,3 @@ document.getElementById('search-button').addEventListener('click', async () => {
     clearPokemonData();
   }
 });
-
-function clearPokemonData() {
-  document.getElementById('pokemon-name').innerText = '';
-  document.getElementById('pokemon-id').innerText = '';
-  document.getElementById('weight').innerText = '';
-  document.getElementById('height').innerText = '';
-  document.getElementById('types').innerText = '';
-  document.getElementById('sprite-img').innerHTML = '';
-  document.getElementById('hp').innerText = '';
-  document.getElementById('attack').innerText = '';
-  document.getElementById('defense').innerText = '';
-  document.getElementById('special-attack').innerText = '';
-  document.getElementById('special-defense').innerText = '';
-  document.getElementById('speed').innerText = '';
-}
