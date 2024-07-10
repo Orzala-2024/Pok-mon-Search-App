@@ -97,7 +97,8 @@ main {
   border-collapse: collapse;
 }
 
-.pokemon-table th, .pokemon-table td {
+.pokemon-table th, 
+.pokemon-table td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
