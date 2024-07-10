@@ -11,6 +11,7 @@ function clearPokemonData() {
   document.getElementById('special-attack').innerText = '';
   document.getElementById('special-defense').innerText = '';
   document.getElementById('speed').innerText = '';
+  document.getElementById('error-message').innerText = ''; // Clear error message
 }
 
 document.getElementById('search-button').addEventListener('click', async () => {
@@ -57,7 +58,13 @@ document.getElementById('search-button').addEventListener('click', async () => {
     document.getElementById('speed').innerText = data.stats.find((stat) => stat.stat.name === 'speed').base_stat;
 
   } catch (error) {
-    alert('Pokémon not found');
+    document.getElementById('error-message').innerText = 'Pokémon not found';
     clearPokemonData();
   }
 });
+
+// Create an element for the error message
+const errorMessage = document.createElement('div');
+errorMessage.id = 'error-message';
+errorMessage.style.color = 'red';
+document.getElementById('search-button').after(errorMessage);
